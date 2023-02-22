@@ -1,0 +1,21 @@
+import React,{useContext} from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import Admin from './Admin'
+import Birthday from './Birthday'
+import Home from './Home'
+import { AuthContext } from '../context/AuthProvider'
+import NotFound from './NotFound'
+export default function AllRoutes() {
+  let Nav=useNavigate()
+  const {auth,setauth}=useContext(AuthContext)
+  return (
+    <div>
+        <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/birthday' element={<Birthday/>}/>
+            {auth?<Route path='/admin' element={<Admin/>}/>:<Route path='*' element={<NotFound/>} />}
+            <Route path='*' element={<NotFound/>}/>
+        </Routes>
+    </div>
+  )
+}

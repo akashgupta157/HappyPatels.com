@@ -1,0 +1,165 @@
+#logo{
+    width: 8.125rem;
+    height: 3.875rem;
+    object-fit: contain;
+    margin-left: 0.625rem;
+}
+#search{
+    background-color: #65388b;
+    height: 1.25rem;
+    color: white;
+    font-size:0.75rem;
+    font-weight:900;
+    padding: 1.125rem;
+    border-top-right-radius: 0.188rem;
+    border-bottom-right-radius: 0.188rem;
+    display: flex;
+    align-items: center;
+}
+input[type=search]{
+    border: 0.06rem solid #e8eaec;
+    height: 2.438rem;
+    border-radius: 0.188rem 0 0 0.188rem; 
+    outline: 0;
+    width: 100%;
+    padding-left: 0.625rem;
+}
+.mlogo{
+    margin-left: auto;
+    margin-right: auto;
+    height: 25px;
+}
+hr{
+    border-top: 1px solid;
+}
+span{
+    font-size: 12px;
+}
+.link{
+    font-weight: bold;
+    font-size: 15.2px;
+    margin-top: 15px;
+    padding-bottom:12px;
+    border-bottom: 3px solid white;
+}
+.link:hover{
+    border-bottom: 3px solid black;
+}
+#link{
+    display: flex;
+    justify-content: space-around;
+}
+input[type="search"]::-webkit-search-cancel-button{
+    display: none;
+}
+.pop{
+    display: grid;
+    width: 19%;
+    border: 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 56px;
+    left: 944px;
+    background-color: white;
+    z-index: 1;
+    padding:10px;
+    text-align: center;
+    border: 0;
+}
+#pop,#pop1{
+    display: none;
+}
+#s{
+    background-color: #65388b;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+}
+#d{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+#c{
+    color: #65388b;
+    font-size: 14px;
+    font-weight: 700;
+}
+#form,#form1{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    z-index:1;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+}
+#form input,#lform input{
+    border: 1px solid;
+    border-radius: 2px;
+    padding: 2px;
+    padding-left: 8px;
+}
+#imgmain{
+    margin: auto;
+    margin-top:80px;
+    cursor: default;
+    height: 80%;
+}
+#form label,#lform label{
+    font-size: 13px;
+}
+#cform{
+    position: absolute;
+    background-color: white;
+    margin: auto;
+    top: 102px;
+    left: 670px;
+    width: 31%;
+    padding: 20px;
+    height: 73%;
+}
+#lform{
+    position: absolute;
+    background-color: white;
+    margin: auto;
+    top: 120px;
+    left: 670px;
+    width: 30%;
+    padding: 20px;
+    height: 68%;
+}
+input[type=checkbox]{
+    width:15px;
+    height:15px;
+    margin-top: 10px;
+}
+u{
+    cursor: pointer;
+}
+.small{
+    font-size:10px;
+    color: red;
+}
+#p{
+    background-color: #65388b;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+}
+#pop2{
+    position: absolute;
+    top: 56px;
+    left: 965px;
+    background-color: white;
+    z-index: 1;
+    padding:10px;
+    width: min-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
