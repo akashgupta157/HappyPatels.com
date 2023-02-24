@@ -5,6 +5,7 @@ import Birthday from './Birthday'
 import Home from './Home'
 import { AuthContext } from '../context/AuthProvider'
 import NotFound from './NotFound'
+import Seeproduct from './Seeproduct'
 export default function AllRoutes() {
   let Nav=useNavigate()
   const {auth,setauth}=useContext(AuthContext)
@@ -15,6 +16,7 @@ export default function AllRoutes() {
             <Route path='/birthday' element={<Birthday/>}/>
             {auth?<Route path='/admin' element={<Admin/>}/>:<Route path='*' element={<NotFound/>} />}
             <Route path='*' element={<NotFound/>}/>
+            <Route path='birthday/:id' element={<Seeproduct/>}/>
         </Routes>
     </div>
   )

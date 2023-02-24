@@ -1,11 +1,13 @@
-import React ,{useEffect,useReducer,useState} from "react";
+import React ,{useContext, useEffect,useReducer,useState} from "react";
 import Footer from './Footer'
 import Navbar from './Navbar'
 import {ChevronRightIcon } from '@chakra-ui/icons'
-import { Link } from 'react-router-dom'
+import { Link, redirect, useNavigate } from 'react-router-dom'
 import '../CSS/Birthday.css';
 import { Spinner } from '@chakra-ui/react'
 import axios from "axios";
+import { AuthContext } from "../context/AuthProvider";
+
 const initialState = {
   data: [],
   isLoading: false,
@@ -38,6 +40,8 @@ const reducer = (state,action) => {
       }
     };
 export default function Birthday() {
+  const {json,setjson}=useContext(AuthContext)
+  const Nav=useNavigate()
   const [url, seturl] = useState("http://localhost:8080/birthdayflower")
   const [val,setval]=useState('featured')
   const [state, dispatch] = useReducer(reducer,initialState)
@@ -72,7 +76,7 @@ export default function Birthday() {
   return (
     <div>
       <Navbar/>
-        <div style={{fontSize:"13px",marginLeft:"10px",color:'#6e3290'}}>
+        <div style={{fontSize:"13px",marginLeft:"10px",color:'#6e3290',marginTop:"5px"}}>
           <Link to="/">Home</Link><ChevronRightIcon/><Link to="/birthday">Birthday</Link><ChevronRightIcon/><Link to="/birthday">Birthday Flowers</Link>
         </div>
         <div style={{display:"flex",marginBottom:"40px"}}>
@@ -94,12 +98,13 @@ export default function Birthday() {
               {isLoading?<Spinner size='xl' marginLeft="200px" color='#6e3290' />:null}
               <div id="container" >
                 {data.map((e)=>(
-                    <div style={{}} key={e.id}>
+                    <div style={{}} key={e.id} onClick={()=>{Nav("/birthday/"+e.id) 
+                    setjson("birthdayflower")}}>
                       <img src={e.img} alt="" style={{display:"block",margin:"auto"}} />
                       <div style={{marginTop:"7px"}}>
                         <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt8d4549d3cac15860/61e09d4f2e109d6c649d4aa4/PP_EligibleIcon.svg" alt="Passport Eligible" height="15" width="142"></img>
                         <small style={{fontSize:"18px",fontWeight:"600"}}>{e.name}</small><br />
-                        <small style={{fontSize:"18px",fontWeight:"900"}}>${e.bprice} - ${2*e.bprice}</small>
+                        <small style={{fontSize:"18px",fontWeight:"900"}}>${e.bprice} - ${1.6*e.bprice}</small>
                       </div>
                     </div>
                 ))}
@@ -107,6 +112,7 @@ export default function Birthday() {
             </div>
           </div>
         </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
       <Footer/>
     </div>
   )
