@@ -18,7 +18,8 @@ export default function Admin() {
     }
    let submit=(e)=>{
     e.preventDefault()
-    let obj={name,bprice,img,imgl,imgm,imgs,description}
+    let obj={name,img,imgl,imgm,imgs,description,
+    bprice:Math.round(bprice*82)}
     fetch(`http://localhost:8080/${cat}`,{
       method: 'POST',
       headers: {
@@ -39,7 +40,7 @@ export default function Admin() {
             <option value="birthdayflower">Birthday Flower</option>
           </select>
         <Input required placeholder='Name' size='md' onChange={(e)=>setname(e.target.value)} />
-        <InputGroup><InputLeftElement pointerEvents='none' color='gray.300' fontSize='1.2em' children='$'/><InputRightElement/><Input required  placeholder='Enter amount'onChange={(e)=>setbprice(+e.target.value)} /></InputGroup>
+        <InputGroup><InputLeftElement pointerEvents='none' color='gray.300' fontSize='1.2em' children='₹'/><InputRightElement/><Input required  placeholder='Enter amount'onChange={(e)=>setbprice(+e.target.value)} /></InputGroup>
         <Input required placeholder='Extra Large' size='md'onChange={(e)=>setimg(e.target.value)} />
         <Input required placeholder='Large ' size='md'onChange={(e)=>setimgl(e.target.value)} />
         <Input required placeholder='Medium' size='md'onChange={(e)=>setimgm(e.target.value)} />

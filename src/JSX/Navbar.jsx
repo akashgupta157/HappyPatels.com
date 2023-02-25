@@ -11,8 +11,10 @@ import { useFormik } from 'formik';
 import { signupschema } from '../schemas';
 import { AuthContext } from '../context/AuthProvider';
 import { Input,InputGroup,InputLeftElement,InputRightElement } from '@chakra-ui/react'
+import { CartContext } from '../context/CartProvider';
 export default function Navbar() {
     const Nav=useNavigate()
+    const {cart}=useContext(CartContext)
     const [show, setShow] = React.useState(false)
     const handleClick = () => setShow(!show)
     const{auth,setAuth, login,user}=useContext(AuthContext)
@@ -147,17 +149,18 @@ export default function Navbar() {
                 <span>My Order</span>
             </div>
             <div style={{cursor:"pointer"}}>
+                <Link to='/cart'>
                 <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt7888ec93d3d5c1ec/5e17829300c38f0f022d3646/Header-Icon-PWA-bag.svg?height=25&width=44" alt="" className="mlogo" />
-                <span>(0)Cart</span>
+                {auth?<span>({cart.length})Cart</span>:<span>(0)Cart</span>}</Link>
             </div>
         </div>
     </div>
     <hr />
     <div id='link'>
-        <Link className='link' to='/birthday'>BIRTHDAY</Link>
+        <Link className='link' to='/birthday'>FLOWERS</Link>
         <Link className='link' >SYMPATHY</Link>
         <Link className='link' >OCCASIONS</Link>
-        <Link className='link' >FLOWERS</Link>
+        <Link className='link' >BIRTHDAY</Link>
         <Link className='link' >PLANTS</Link>
         <Link className='link' >GIFTS BASKETS & FOOD</Link>
         <Link className='link' >GIFTS & MORE</Link>
