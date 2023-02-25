@@ -26,8 +26,9 @@ let Submit=(e)=>{
     let select=document.getElementById("select")
     var text = select.options[select.selectedIndex].text;
     let sizea=(size.nextSibling).data
+    let quan=1
     if (pin.length===6) {
-        atc(pin,text,size.value,sizea,img,data.name)
+        atc(pin,text,size.value,sizea,img,data.name,quan)
         toast.success('Product Added to Cart', {position: "top-center",autoClose: 2000,hideProgressBar: true,closeOnClick: true,pauseOnHover: true,draggable: true,progress: undefined,theme: "colored",});
     }else{
         toast.error('Enter a 6 digit pin code', {position: "top-center",autoClose: 2000,hideProgressBar: true,closeOnClick: true,pauseOnHover: true,draggable: true,progress: undefined,theme: "colored",});
@@ -40,7 +41,7 @@ let Submit=(e)=>{
     <>
         <Navbar/>
         <div style={{fontSize:"13px",marginLeft:"10px",color:'#6e3290',marginTop:"10px"}}>
-            <Link to="/">Home</Link><ChevronRightIcon/><Link to="/birthday">Birthday</Link><ChevronRightIcon/><Link to="/birthday">Flowers</Link><ChevronRightIcon/><Link>{data.name}</Link>
+            <Link to="/">Home</Link><ChevronRightIcon/><Link to="/birthday">Flowers</Link><ChevronRightIcon/><Link>{data.name}</Link>
         </div>
         <div style={{padding:"10px",paddingLeft:"40px",display:"flex"}}>
             <div>

@@ -202,7 +202,7 @@ export default function Navbar() {
                 </div>
                 <div style={{marginTop:"3px",marginBottom:"5px"}}>
                     <label htmlFor="email">Email</label><br />
-                    <input style={{width:"370px"}} type="email" name='id' id='email' value={values.id} onChange={handleChange} /><br />
+                    <input style={{width:"370px"}} type="email" name='id' id='email' value={values.id} onChange={handleChange} required /><br />
                     {errors.email && touched.email ?<small className='small'>{errors.email}</small>:null}
                 </div>
                 <div style={{marginTop:"10px",marginBottom:"5px"}}>

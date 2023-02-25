@@ -76,7 +76,7 @@ export default function Birthday() {
     <div>
       <Navbar/>
         <div style={{fontSize:"13px",marginLeft:"10px",color:'#6e3290',marginTop:"5px"}}>
-          <Link to="/">Home</Link><ChevronRightIcon/><Link to="/birthday">Flowers</Link><ChevronRightIcon/><Link to="/birthday">Flowers</Link>
+          <Link to="/">Home</Link><ChevronRightIcon/><Link to="/birthday">Flowers</Link>
         </div>
         <div style={{display:"flex",marginBottom:"40px",alignItems:"center"}}>
           <p id='bf'>Flowers Arrangements & Floral Delivery </p>
