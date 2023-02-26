@@ -12,10 +12,12 @@ import { signupschema } from '../schemas';
 import { AuthContext } from '../context/AuthProvider';
 import { Input,InputGroup,InputLeftElement,InputRightElement } from '@chakra-ui/react'
 import { CartContext } from '../context/CartProvider';
+import axios from 'axios';
 export default function Navbar() {
     const Nav=useNavigate()
     const {cart}=useContext(CartContext)
     const [show, setShow] = React.useState(false)
+    const [search,setSearch]=useState([])
     const handleClick = () => setShow(!show)
     const{auth,setAuth, login,user}=useContext(AuthContext)
     const [email, setemail] = useState()
@@ -131,12 +133,15 @@ export default function Navbar() {
         Nav("/")
         }, 1500);
     }
+    let handleSearch=(e)=>{
+        axios.get("http://localhost:8080/birthdayflower/")
+    }
   return (
     <>
     <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <Link to='/'><img src={logo} alt="" id='logo'/></Link>
         <form action="search" style={{display:"flex",width:"50%"}}>
-            <input type="search" name="" id="" placeholder={place} onFocus={()=>{setplace("What are you looking for?")}} />
+            <input type="search" name="search" className='search' placeholder={place} onChange={handleSearch} onFocus={()=>{setplace("What are you looking for?")}} />
             <button type="submit" id='search'>SEARCH</button>
         </form>
         <div style={{display:"flex",justifyContent:"space-between",width:"20%",marginRight:"20px"}}>

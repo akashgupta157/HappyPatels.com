@@ -10,7 +10,7 @@ export  function CartProvider({children}) {
     }
   return (
     <div>
-        <CartContext.Provider value={{atc,cart,total,settotal}}>
+        <CartContext.Provider value={{atc,cart,total,settotal,setcart}}>
             {children}
         </CartContext.Provider>
     </div>

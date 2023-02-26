@@ -6,7 +6,7 @@ import Home from './Home'
 import { AuthContext } from '../context/AuthProvider'
 import NotFound from './NotFound'
 import Seeproduct from './Seeproduct'
-import Payment from './Payment'
+import Payment from './Payment.tsx'
 import Cart from './Cart'
 import { CartContext } from '../context/CartProvider'
 export default function AllRoutes() {

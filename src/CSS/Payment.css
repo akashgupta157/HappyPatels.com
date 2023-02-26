@@ -1,0 +1,21 @@
+
+  .multi-input {
+    margin-top: 10px;
+    display: flex;
+  }
+  .multi-input input{
+    padding-left:5px;
+  }
+  #btn{
+    width:100%;
+    margin-top: 20px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4BE5E5;
+    font-weight: 900;
+    color: white;
+  }
+  #btn:hover{
+    background-color:aqua;
+  }

@@ -37,7 +37,7 @@ useEffect(() => {
   return (
     <div>
         <Navbar/>
-        {Cart.length===0?<div style={{display:"grid",color:"GrayText",fontSize:"35px"}}><img src="https://media.istockphoto.com/id/1139666909/vector/shopping-cart-shop-trolley-or-basket-in-the-supermarket.jpg?s=612x612&w=0&k=20&c=_HajO7ifYKxuwzKFf-Fx9lsLKBa_1Rq9vuzGiPq8Q5Q=" alt="" width="400px" style={{margin:"auto"}} /><small style={{margin:"auto",position:"absolute",left:"50%",top:"90%",transform: "translate(-50%, -50%)"}}>Your cart is empty.</small></div>:<div style={{display:"flex"}}>
+        {Cart.length===0?<div style={{display:"grid",color:"GrayText",fontSize:"35px"}}><img src="https://media.istockphoto.com/id/1139666909/vector/shopping-cart-shop-trolley-or-basket-in-the-supermarket.jpg?s=612x612&w=0&k=20&c=_HajO7ifYKxuwzKFf-Fx9lsLKBa_1Rq9vuzGiPq8Q5Q=" alt="" width="400px" style={{margin:"auto"}} /><small style={{margin:"auto",position:"absolute",left:"50%",top:"90%",color:"gray",transform: "translate(-50%, -50%)"}}>Your cart is empty.</small></div>:<div style={{display:"flex"}}>
         <div id="wrap" >
             <p style={{fontSize:"28px",fontWeight:"900",padding:"10px",marginLeft:"80px"}}>Delivery Information</p>
             <div id='scroll' style={{overflowY:"scroll" ,height:"480px",width:"110%"}}>
@@ -86,7 +86,7 @@ useEffect(() => {
                 <div style={{display:"flex",justifyContent:"space-between"}}><small style={{fontSize:"15px"}}>Delivery Charges</small><small style={{fontSize:"15px"}}>₹ 40</small></div>
                 <hr style={{marginTop:"10px",marginBottom:"10px"}}/>
                 <div style={{fontWeight:"900",fontSize:"20px",paddingBottom:"15px",display:"flex",justifyContent:"space-between"}}><small>Order Total</small><small>₹{new Intl.NumberFormat('en-IN',{maximumSignificantDigits:3}).format(total+40)}</small></div>
-                <button style={{border:"1px solid purple",fontSize:"16px",marginLeft:"12%",padding:"5px",borderRadius:"5px",width:"240px",fontWeight:"900"}}id="add"><a href='http://localhost:3001/'>PAYMENT</a></button>
+                <button style={{border:"1px solid purple",fontSize:"16px",marginLeft:"12%",padding:"5px",borderRadius:"5px",width:"240px",fontWeight:"900"}}id="add" onClick={()=>{Nav("/payment")}} >PAYMENT</button>
                 </div>
               </div>
             </div>}

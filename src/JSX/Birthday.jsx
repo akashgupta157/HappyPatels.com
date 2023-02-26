@@ -78,15 +78,15 @@ export default function Birthday() {
         <div style={{fontSize:"13px",marginLeft:"10px",color:'#6e3290',marginTop:"5px"}}>
           <Link to="/">Home</Link><ChevronRightIcon/><Link to="/birthday">Flowers</Link>
         </div>
-        <div style={{display:"flex",marginBottom:"40px",alignItems:"center"}}>
+        <div style={{display:"flex",marginBottom:"20px",alignItems:"center"}}>
           <p id='bf'>Flowers Arrangements & Floral Delivery </p>
           <div className="vl" style={{height:"80px"}}></div>
           <span style={{fontSize:"14px",marginRight:"40px"}}>From birthday parties to anniversary dinners, floral arrangements full of fresh, beautiful flowers are the perfect complement. This Mother’s Day, send gorgeous Mother’s Day Flowers to loved ones near or far! Whether you choose to send a bright arrangement of yellow sunflowers, vibrant roses, and colorful lilies, or a flower arrangement with delicate pastels, smiles are sure to follow! </span>
         </div>
         <div>
-          <div style={{display:"flex"}}>
+          <div>
             <div style={{width:"370px"}}>
-                <select name="" id="sort" onChange={change} style={{marginTop:"20px",marginLeft:"10px",border:"1px solid",padding:"5px",borderRadius:"5px",color:" #6e3290"}}>
+                <select name="" id="sort" onChange={change} style={{marginLeft:"1125px",border:"1px solid",padding:"5px",borderRadius:"5px",color:" #6e3290"}}>
                   <option value="featured">Sort by: Featured</option>
                   <option value="lth">Sort by: Price: Low to High </option>
                   <option value="htl">Sort by: Price: High to Low </option>
@@ -94,7 +94,7 @@ export default function Birthday() {
             </div>
             
             <div>
-              {isLoading?<Spinner size='xl' marginLeft="450px" color='#6e3290' />:null}
+              {isLoading?<Spinner size='xl' marginLeft="600px" color='#6e3290' />:null}
               <div id="container" >
                 {data.map((e)=>(
                     <div style={{}} key={e.id} onClick={()=>{Nav("/birthday/"+e.id)}}>
