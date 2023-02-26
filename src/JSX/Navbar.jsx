@@ -151,7 +151,7 @@ export default function Navbar() {
             <div style={{cursor:"pointer"}}>
                 <Link to='/cart'>
                 <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt7888ec93d3d5c1ec/5e17829300c38f0f022d3646/Header-Icon-PWA-bag.svg?height=25&width=44" alt="" className="mlogo" />
-                {auth?<span>({cart.length})Cart</span>:<span>(0)Cart</span>}</Link>
+                {auth?<span><button style={{background:"purple",color:"white",borderRadius:"50px",width:"20px",height:"20px",fontSize:"13px"}}>{cart.length}</button>Cart</span>:<span><button style={{background:"purple",color:"white",borderRadius:"50px",width:"20px",height:"20px",fontSize:"13px"}}>0</button>Cart</span>}</Link>
             </div>
         </div>
     </div>
@@ -202,12 +202,12 @@ export default function Navbar() {
                 </div>
                 <div style={{marginTop:"3px",marginBottom:"5px"}}>
                     <label htmlFor="email">Email</label><br />
-                    <input style={{width:"370px"}} type="email" name='id' id='email' value={values.id} onChange={handleChange} required /><br />
+                    <input style={{width:"370px"}} type="email" name='id' id='email' value={values.id} onChange={handleChange} required autoComplete="off"/><br />
                     {errors.email && touched.email ?<small className='small'>{errors.email}</small>:null}
                 </div>
                 <div style={{marginTop:"10px",marginBottom:"5px"}}>
                     <label htmlFor="password">Password</label><br />
-                    <input style={{width:"370px"}}type="password" name='password' id='password' value={values.password} onChange={handleChange}   /><br />
+                    <input style={{width:"370px"}}type="password" name='password' id='password' value={values.password} onChange={handleChange}  autoComplete="off" /><br />
                     {errors.password && touched.password ?<small className='small'>{errors.password}</small>:null}
                 </div>
             <div style={{display:"flex",alignItems:"center"}}>
