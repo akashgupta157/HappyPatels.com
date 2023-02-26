@@ -20,7 +20,7 @@ export default function Seeproduct() {
         .then(data=>setdata(data))
 let Submit=(e)=>{
     e.preventDefault()
-    if (!auth) {
+    if (auth) {
     let size=document.querySelector('input[name="flower"]:checked');
     let pin=document.getElementById("pin").value
     let select=document.getElementById("select")
