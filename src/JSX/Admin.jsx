@@ -20,7 +20,7 @@ export default function Admin() {
     e.preventDefault()
     let obj={name,img,imgl,imgm,imgs,description,
     bprice:Math.round(bprice*82)}
-    fetch(`http://localhost:8080/${cat}`,{
+    fetch(`https://jsonn-xl6o.onrender.com/${cat}`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

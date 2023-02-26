@@ -15,7 +15,7 @@ export default function Seeproduct() {
     const [data,setdata]=useState([])
     const [img,setimg]=useState()
     const param=useParams()
-        fetch(`http://localhost:8080/birthdayflower/${param.id}`)
+        fetch(`https://jsonn-xl6o.onrender.com/birthdayflower/${param.id}`)
         .then(res=>res.json())
         .then(data=>setdata(data))
 let Submit=(e)=>{

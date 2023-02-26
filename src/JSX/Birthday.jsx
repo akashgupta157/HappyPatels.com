@@ -41,7 +41,7 @@ const reducer = (state,action) => {
     };
 export default function Birthday() {
   const Nav=useNavigate()
-  const [url, seturl] = useState("http://localhost:8080/birthdayflower")
+  const [url, seturl] = useState("https://jsonn-xl6o.onrender.com/birthdayflower")
   const [val,setval]=useState('featured')
   const [state, dispatch] = useReducer(reducer,initialState)
   const {data,isLoading,error}=state
@@ -62,13 +62,13 @@ export default function Birthday() {
   useEffect(()=>{
     var e = document.getElementById("sort");
   if (val==="htl") {
-    seturl("http://localhost:8080/birthdayflower?_sort=bprice&_order=desc")
+    seturl("https://jsonn-xl6o.onrender.com/birthdayflower?_sort=bprice&_order=desc")
     e.style.width="220px"
   }else if(val==="lth"){
-    seturl("http://localhost:8080/birthdayflower?_sort=bprice&_order=asc")
+    seturl("https://jsonn-xl6o.onrender.com/birthdayflower?_sort=bprice&_order=asc")
     e.style.width="220px"
   }else if(val==="featured"){
-    seturl("http://localhost:8080/birthdayflower")
+    seturl("https://jsonn-xl6o.onrender.com/birthdayflower")
     e.style.width="160px"
   }
   })

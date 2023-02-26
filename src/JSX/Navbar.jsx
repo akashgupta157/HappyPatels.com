@@ -31,7 +31,7 @@ export default function Navbar() {
         if(password==="" || password.length<=6 || password===null){
             toast.error('Enter Valid Password', {position: "top-center",autoClose: 1000,hideProgressBar: true,closeOnClick: true,pauseOnHover: true,draggable: true,progress: undefined,theme: "colored",});
         }else{
-            fetch(`http://localhost:8080/profile/${email}`)
+            fetch(`https://jsonn-xl6o.onrender.com/profile/${email}`)
             .then(res=>res.json())
             .then(data=>{
                 if(Object.keys(data).length===0){
@@ -107,7 +107,7 @@ export default function Navbar() {
         initialValues,
         validationSchema:signupschema,
         onSubmit:(values,action)=>{
-        fetch('http://localhost:8080/profile', {
+        fetch('https://jsonn-xl6o.onrender.com/profile', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

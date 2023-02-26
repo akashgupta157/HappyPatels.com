@@ -3,8 +3,10 @@ import { CartContext } from '../context/CartProvider'
 import '../CSS/Payment.css'
 import { useCreditCardValidator, images } from 'react-creditcard-validator';
 import { useNavigate } from 'react-router-dom';
+import { Spinner } from '@chakra-ui/react'
 export default function Payment() {
   const {cart,setcart,total}=useContext(CartContext)
+  const [load,setload]=useState(false)
   let Nav=useNavigate()
   function expDateValidate(month: string, year: string) {
     if (Number(year) > 2035) {
@@ -24,14 +26,18 @@ export default function Payment() {
     e.preventDefault()
     if(Object.values(erroredInputs)[0]===undefined && Object.values(erroredInputs)[1]==undefined && Object.values(erroredInputs)[2]==undefined){
       let main= document.getElementById("main").style.display="none"
-      let p=document.getElementById("m").style.width="400px"
       let po=document.getElementById("m").style.border="0"
-      let pp= document.getElementById("ps").style.display="initial"
       setcart([])
+      setload(true)
       setTimeout(() => {
+      setload(false)
+      let p=document.getElementById("m").style.width="400px"
+      let pp= document.getElementById("ps").style.display="initial"
+      }, 3000);
+      setTimeout(() => {
+        setload(false)
         Nav("/")
-      }, 2000);
-      
+      }, 5000);
     }
   }
   return (
@@ -71,6 +77,7 @@ export default function Payment() {
       <button id='btn'>PAY₹{new Intl.NumberFormat('en-IN',{maximumSignificantDigits:3}).format(total+40)}</button>
       </div>
       </form>
+          {load?<Spinner size='xl' position="absolute" marginLeft="100px" top="200px" color='#6e3290' />:<Spinner style={{display:"none"}} size='xl' position="absolute" marginLeft="100px" top="200px" color='#6e3290'/>}
       <div id='ps' style={{display:"none"}} >
           <img src="http://craftizen.org/wp-content/uploads/2019/02/successful_payment_388054.png" alt="" />
           <p style={{display:"flex",justifyContent:"center",fontSize:"30px"}}>Payment Successfully Done</p>
