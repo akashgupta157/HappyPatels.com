@@ -1,0 +1,26 @@
+.MuiSvgIcon-root{
+    width: 30px;
+    cursor: pointer;
+}
+#time-3-icon {
+    fill: purple;
+ }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  #add{
+    color: purple;
+  }
+#add:hover{
+  background: purple;
+  color: white;
+}

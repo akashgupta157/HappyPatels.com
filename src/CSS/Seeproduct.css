@@ -1,0 +1,37 @@
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.15em solid #6e3290;;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  input[type="radio"]::before {
+    content: "";
+    width: .8em;
+    height: .8em;
+    border-radius: 50%;
+    transform: scale(0);
+    /* transition: 120ms transform ease-in-out; */
+    box-shadow: inset 1em 1em #6e3290;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  .form-control {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 1.4em;
+    cursor: pointer;
+  }
+

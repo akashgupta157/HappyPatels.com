@@ -1,0 +1,19 @@
+#bf{
+    font-size: x-large;
+    width: 1400px;
+    text-align: center;
+    padding:10px;
+    font-weight: 900;
+    color: #6e3290;
+}
+.vl{
+    margin-left:15px;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 10px;
+}
