@@ -20,7 +20,7 @@ Cart: View your selected flowers and checkout with a secure payment system.
 Search: Search for specific flowers or sellers.
 Reviews: Leave reviews for flowers and sellers to help other users make informed decisions.
 Usage
-Using HappyPatels is simple and easy.
+Using HappyPatels.com is simple and easy.
 
 As a buyer, simply browse our selection of flowers, add them to your cart, and checkout using our secure payment system.
 As a seller, set up a seller account and list your flowers for sale. You can manage your listings and sales from your seller dashboard.
