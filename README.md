@@ -2,7 +2,7 @@
 # HappyPatels.com
 Welcome to HappyPatels, an ecommerce platform for buying and selling flowers. Our platform aims to provide a seamless buying and selling experience for all users.
 ## Installation
-To use HappyPatels.com, simply visit our website at https://mean-part-5754-h6tu1wksk-akashgupta157.vercel.app/ and sign up for an account. 
+To use HappyPatels.com, simply visit our website at https://mean-part-5754-sigma.vercel.app/ and sign up for an account. 
 ## Features
 Our platform includes the following features:
 
