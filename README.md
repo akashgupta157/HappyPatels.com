@@ -2,8 +2,7 @@
 # HappyPatels.com
 Welcome to HappyPatels, an ecommerce platform for buying and selling flowers. Our platform aims to provide a seamless buying and selling experience for all users.
 ## Installation
-To use HappyPatels.com, simply visit our website at https://63fb77ee78ab22079005e7a2--happypetals.netlify.app/birthday and sign up for an account. We currently require a link to open in another tab https://jsonn-xl6o.onrender.com .
-
+To use HappyPatels.com, simply visit our website at https://mean-part-5754-h6tu1wksk-akashgupta157.vercel.app/ and sign up for an account. 
 ## Features
 Our platform includes the following features:
 
